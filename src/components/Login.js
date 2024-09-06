@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Header from "./Header";
 import {checkValidData} from "./../utils/validate"
 import {useNavigate} from "react-router-dom"
+import { LOGO_URL } from "../utils/constants";
 const Login = () => {
   const user =  {
     email: "praveen@gmail.com",
@@ -24,14 +25,14 @@ const Login = () => {
     if(email.current.value === user.email && password.current.value === user.password) {
       navigate("/browse")
     }
-    console.log(data)
+    // console.log(data)
   }
   return (
     <div>
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/a99688ca-33c3-4099-9baa-07a2e2acb398/ca15fd28-b624-4852-8bfe-9cdd5c88475d/IN-en-20240520-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={LOGO_URL}
           alt=""
         />
       </div>
