@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleGpt } from "../utils/gptSlice";
+import { toggleGpt } from "../utils/store/gptSlice";
 import { SUPPORTED_LANGUAGES } from "../utils/constants";
-import { changelanguage } from "../utils/configSlice";
+import { changelanguage } from "../utils/store/configSlice";
 const Header = () => {
   const disptch = useDispatch()
   const navigate = useNavigate();
@@ -18,9 +18,9 @@ const Header = () => {
   }
   const gptButton = useSelector( (store) => store.gpt.showGptButton)
   return (
-    <div className="absolute w-screen flex justify-between px-8 py-4 bg-gradient-to-b from-black z-10">
-      <img
-        className="w-48"
+    <div className="absolute w-screen flex flex-col md:flex-row justify-between px-8 py-4 bg-gradient-to-b from-black z-10">
+      <img 
+        className="w-48 mx-auto md:mx-0"
         src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         alt=""
       /> 

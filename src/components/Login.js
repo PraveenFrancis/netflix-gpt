@@ -31,12 +31,12 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
+        <img className="h-screen object-cover md:h-auto"
           src={LOGO_URL}
           alt=""
         />
       </div>
-      <form onSubmit={ (e) => e.preventDefault()} action="" className="absolute p-10 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80">
+      <form onSubmit={ (e) => e.preventDefault()} action="" className="absolute p-10 bg-black w-[90%] md:w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80">
         <h1 className="font-bold text-3xl py-4">{isSignInForm?  "Sign In" : "Sing Up"}</h1>
         <input type="text" ref={email} className="p-2 my-2 w-full bg-gray-700" placeholder="email"/>
         {!isSignInForm && <input type="text" className="p-2 my-2 w-full bg-gray-700" placeholder="Full Name"/>}

@@ -4,16 +4,15 @@ import GptSeachBar from "./GptSeachBar";
 import { LOGO_URL } from "../utils/constants";
 const GptSearch = () => {
   return (
-    <div>
+    <>
       <div className="absolute -z-10">
-        <img
-          src={LOGO_URL}
-          alt=""
-        />
+        <img className="h-screen object-cover md:h-auto" src={LOGO_URL} alt="" />
       </div>
-      <GptSeachBar />
-      <GptMovieSuggestions />
-    </div>
+      <div className="pt-[40%] md:pt-0" >
+        <GptSeachBar />
+        <GptMovieSuggestions />
+      </div>
+    </>
   );
 };
 
